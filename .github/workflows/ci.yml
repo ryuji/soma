@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    container:
+      image: mgiken/crystal:0.35.1
+
+    steps:
+    - uses: actions/checkout@v2
+    - run: crystal tool format --check
+    - run: ameba --all
+    - run: shards install
+    - run: crystal spec --error-on-warnings
