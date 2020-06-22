@@ -1,0 +1,116 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /Users/rm/hack/github.com/ryuji/soma
+
+  # Export additional ENV variables
+  env:
+    recording: true
+
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 120
+
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 31
+
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+
+  # Quality
+  # 1 - 100
+  quality: 100
+
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: solid
+    title: null
+    style:
+      backgroundColor: "#2e3440"
+      boxShadow: none
+      margin: 0px
+
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "JetBrains Mono, monospace"
+
+  # The size of the font
+  fontSize: 13
+
+  # The height of lines
+  lineHeight: 1.2
+
+  # The spacing between letters
+  letterSpacing: 0
+
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#d8dee9"
+    cursor: "transparent"
+    black: "#3b4252"
+    red: "#bf616a"
+    green: "#a3be8c"
+    yellow: "#ebcb8b"
+    blue: "#81a1c1"
+    magenta: "#b48ead"
+    cyan: "#88c0d0"
+    white: "#e5e9f0"
+    brightBlack: "#4c566a"
+    brightRed: "#bf616a"
+    brightGreen: "#a3be8c"
+    brightYellow: "#ebcb8b"
+    brightBlue: "#81a1c1"
+    brightMagenta: "#b48ead"
+    brightCyan: "#8fbcbb"
+    brightWhite: "#eceff4"
+
+
+# Records, feel free to edit them
+records:
+  - delay: 1000
+    content: "05:59:19.367 | main        | \e[90mTRACE \e[0m |             | \e[90mLogs a message with trace log level.    \e[0m\r\n05:59:19.367 | main        | \e[90mDEBUG \e[0m |             | \e[90mLogs a message with debug log level.    \e[0m\r\n05:59:19.367 | main        | \e[92mINFO  \e[0m |             | \e[92mLogs a message with info log level.     \e[0m\r\n05:59:19.367 | main        | \e[94mNOTICE\e[0m |             | \e[94mLogs a message with notice log level.   \e[0m\r\n05:59:19.368 | main        | \e[93mWARN  \e[0m |             | \e[93mLogs a message with warn log level.     \e[0m\r\n05:59:19.368 | main        | \e[91mERROR \e[0m |             | \e[91mLogs a message with error log level.    \e[0m\r\n05:59:19.368 | main        | \e[95mFATAL \e[0m |             | \e[95mLogs a message with fatal log level.    \e[0m\r\n05:59:19.368 | main        | \e[92mINFO  \e[0m |             | \e[92mUser logged in                          \e[0m \e[92muser_id\e[0m=42\r\n05:59:19.369 | main        | \e[93mWARN  \e[0m |             | \e[93mOh no!                                  \e[0m \e[93muser_id\e[0m=42\r\n\e[93mSomething is wrong (Exception)\e[0m\r\n\e[93m  from samples/main.cr:16:3 in '__crystal_main'\e[0m\r\n\e[93m  from ../usr/share/crystal/src/crystal/main.cr:105:5 in 'main_user_code'\e[0m\r\n\e[93m  from ../usr/share/crystal/src/crystal/main.cr:91:7 in 'main'\e[0m\r\n\e[93m  from ../usr/share/crystal/src/crystal/main.cr:114:3 in 'main'\e[0m\r\n\e[93m  from ???\e[0m\r\n05:59:19.500 | main        | \e[91mERROR \e[0m |             | \e[91mOh no!                                  \e[0m\r\n\e[91mSomething is wrong (Exception)\e[0m\r\n\e[91m  from samples/main.cr:16:3 in '__crystal_main'\e[0m\r\n\e[91m  from ../usr/share/crystal/src/crystal/main.cr:105:5 in 'main_user_code'\e[0m\r\n\e[91m  from ../usr/share/crystal/src/crystal/main.cr:91:7 in 'main'\e[0m\r\n\e[91m  from ../usr/share/crystal/src/crystal/main.cr:114:3 in 'main'\e[0m\r\n\e[91m  from ???\e[0m\r\n05:59:19.507 | main        | \e[95mFATAL \e[0m |             | \e[95mSomething is wrong                      \e[0m\r\n\e[95mSomething is wrong (Exception)\e[0m\r\n\e[95m  from samples/main.cr:16:3 in '__crystal_main'\e[0m\r\n\e[95m  from ../usr/share/crystal/src/crystal/main.cr:105:5 in 'main_user_code'\e[0m\r\n\e[95m  from ../usr/share/crystal/src/crystal/main.cr:91:7 in 'main'\e[0m\r\n\e[95m  from ../usr/share/crystal/src/crystal/main.cr:114:3 in 'main'\e[0m\r\n\e[95m  from ???\e[0m\r\n05:59:19.511 | main        | \e[92mINFO  \e[0m |             | \e[92m                                        \e[0m \e[92maction\e[0m=log_in \e[92muser_id\e[0m=42\r\n05:59:19.514 | main        | \e[92mINFO  \e[0m | foo         | \e[92mThis is logged in foo source            \e[0m"
